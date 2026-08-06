@@ -68,3 +68,10 @@ Through this project I gained experience with:
 ### Reviews 
 <img width="1873" height="984" alt="image" src="https://github.com/user-attachments/assets/b7bab6d8-38ff-40cf-82fc-8e8555e21a3f" />
 
+
+## Things to Improve 
+- Adding routes to make customers reply to each other
+- Adding a "Add customer" route to make customers add each other
+- Adding a new route for uploading pictures for Admin to change the Pizza profile
+- Adding routes for customer profile to allow customers to upload their own profile pictures
+- 
