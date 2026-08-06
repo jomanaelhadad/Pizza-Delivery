@@ -40,14 +40,14 @@ This application allows users to browse pizzas, create accounts, place orders, v
 ``
 final_ca1/
 │
-├── app.py      # Main Flask application
-├── database.py # Database functions
-├── forms.py    # Flask forms
-├── schema.sql  # Database schema
+├── app.py   
+├── database.py 
+├── forms.py    
+├── schema.sql  
 │
-├── static/     # CSS, images, fonts
+├── static/    
 │
-└── templates/  # HTML templates
+└── templates/  
 ``
 
 ## How to Run
