@@ -67,6 +67,11 @@ Through this project I gained experience with:
 
 ### Reviews 
 <img width="1873" height="984" alt="image" src="https://github.com/user-attachments/assets/b7bab6d8-38ff-40cf-82fc-8e8555e21a3f" />
+### Cart 
+<img width="1909" height="976" alt="image" src="https://github.com/user-attachments/assets/3543da7c-e290-437c-9b93-4fcee15e5a0b" />
+
+### Order History 
+<img width="1882" height="979" alt="image" src="https://github.com/user-attachments/assets/351baccd-7109-4b09-928a-85741ae37cb1" />
 
 
 ## Things to Improve 
@@ -74,4 +79,4 @@ Through this project I gained experience with:
 - Adding a "Add customer" route to make customers add each other
 - Adding a new route for uploading pictures for Admin to change the Pizza profile
 - Adding routes for customer profile to allow customers to upload their own profile pictures
-- 
+  
