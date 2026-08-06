@@ -1,0 +1,84 @@
+# Pizza Delivery Web Application
+
+A full-stack pizza delivery web application built using Flask for my university project.
+
+## Overview
+
+This application allows users to browse pizzas, create accounts, place orders, view order history and manage their profiles. It also includes an admin system for managing pizzas and viewing customer activity.
+
+## Features
+
+### Customer Features
+- User registration and login
+- Browse pizza menu
+- View pizza details
+- Add items to cart
+- Removing items from cart 
+- Place orders
+- View order history
+- Leave and manage reviews
+- Edit account details
+
+### Admin Features
+- Admin login system
+- Add, edit, and remove pizzas
+- Manage customer reviews
+- View customer accounts
+
+## Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML
+- CSS
+- Jinja2 Templates
+
+## Project Structure
+
+final_ca1/
+│
+├── app.py      # Main Flask application
+├── database.py # Database functions
+├── forms.py    # Flask forms
+├── schema.sql  # Database schema
+│
+├── static/     # CSS, images, fonts
+│
+└── templates/  # HTML templates
+
+
+## How to Run
+1. Clone the repository:
+git clone <repository-url>
+2. Install dependencies:
+pip install -r requirements.txt
+3. Run the application
+`python -m flask run`
+4. Open your browser and go to:
+http://127.0.0.1:5000
+
+
+## What I Learned
+Through this project I gained experience with:
+
+- Flask application structure
+- Routing and templates
+- Using SQL
+- Database management
+- User authentication
+- CRUD operations
+- Connecting front-end and back-end components
+
+### Landing Page 
+<img width="1905" height="979" alt="image" src="https://github.com/user-attachments/assets/26bbeb1d-5df9-4b36-bffd-983c11279ed3" />
+
+### Menu 
+<img width="1897" height="973" alt="image" src="https://github.com/user-attachments/assets/eb25a050-08e3-4686-828a-cdc4dd441e7e" />
+
+### Individual Pizzas 
+<img width="1906" height="988" alt="image" src="https://github.com/user-attachments/assets/fad94ad0-ca9c-41b1-99f5-799bfe2371b0" />
+
+### Reviews 
+<img width="1873" height="984" alt="image" src="https://github.com/user-attachments/assets/b7bab6d8-38ff-40cf-82fc-8e8555e21a3f" />
+
