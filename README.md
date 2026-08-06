@@ -36,6 +36,8 @@ This application allows users to browse pizzas, create accounts, place orders, v
 
 ## Project Structure
 
+
+``
 final_ca1/
 │
 ├── app.py      # Main Flask application
@@ -46,7 +48,7 @@ final_ca1/
 ├── static/     # CSS, images, fonts
 │
 └── templates/  # HTML templates
-
+``
 
 ## How to Run
 1. Clone the repository:
