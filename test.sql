@@ -120,7 +120,7 @@ CREATE TABLE customers(
     password TEXT NOT NULL, 
     phone_number TEXT NOT NULL,
     address TEXT NOT NULL,
-    is_admin INTEGER DEFAULT 0  -- add this
+    is_admin INTEGER DEFAULT 0  
 );
 
 ALTER TABLE customers ADD COLUMN is_admin INTEGER DEFAULT 0;
