@@ -1,0 +1,1054 @@
+body{
+    background-color: rgb(63, 32, 32);
+    font-family: viaoda;
+    margin: 0;
+    color: white;
+    padding:0;
+    font-size: 1em; 
+    min-height: 100vh;} 
+@font-face {
+  font-family: "viaoda";
+  src: url(ViaodaLibre-Regular.ttf); 
+}
+@font-face {
+  font-family: "babyloncia"; 
+  src: url(Babylonica-Regular.ttf); 
+}
+@font-face {
+  font-family: "upright"; 
+  src: url(CormorantUpright-Regular.ttf); 
+}
+
+
+#home{
+    padding: 4.5em; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 12.5em;
+    width: 50%; 
+    font-size: 1em;
+    color: white;
+    background-color:rgba(0, 0, 0, 0.800);
+    margin-bottom: 12.5em;
+}
+#home-bg{
+    background-image: url("margherita.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-bottom: 2px solid #00000085;
+    padding: 10em;
+}
+
+.wood-bg{
+    background-image: url("menu-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10em; 
+}
+
+
+#pizza-bg{
+    background-image: url("firePizza.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10em; 
+}
+.bg-img{
+    background-image: url("cart.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10em;
+}
+
+
+#home a.btn{
+    font-family:viaoda;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 0.5em 1em;
+    border-radius: 2em; 
+    margin: 0.5em; 
+    border: 0.5px solid rgb(255, 255, 255);
+    transition: all 0.3s ease;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+#home a.btn:hover{
+    transform: scale(1.05);
+    border-radius: 2em; 
+    color: black;
+    background-color: #ffffff;
+}
+
+h2{
+    font-size: 3em;
+    font-family:"babyloncia";
+    border-bottom: 1px solid gold;
+    margin-bottom: 1em;
+    margin-top: 0; 
+    padding-bottom: 0.5em;
+}
+header{
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1em 2em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+}
+small{
+    padding: 0.5em; 
+    margin: 1em; 
+    display: block; 
+
+}
+
+header nav a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1em;
+    padding: 0.5em;
+    margin: 0.5;
+    border-bottom: 1px solid white; 
+    transition: all 0.3s ease;
+}
+
+header nav a:hover{
+    color: black; 
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.1); 
+}
+
+
+
+
+
+
+
+#pizzasMenu {
+    margin-top: 2em; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(0.5em);
+    color: white;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-gap: 2em;
+    padding: 2em;
+    margin-bottom: 2em;
+}
+
+#pizzasMenu h1 {
+    font-family: "babyloncia";
+    grid-column: 1 / -1;
+    font-size: 4.8em;
+    margin-bottom: 1em;
+    color: white;
+    margin-top: 0;
+    border-bottom: 1px solid gold;
+    padding-bottom: 0.5em;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+
+.pizzaBoxes {
+    backdrop-filter: blur(0.5em);
+    padding: 2em;
+    border: 1px solid rgba(133, 71, 0, 0.6);
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 75%; 
+    align-items: center;
+}
+
+.pizzaBoxes:hover {
+    transform: translateY(-10px);
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 1px solid rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+
+.pizzaBoxes img {
+    object-fit: cover;
+    border-radius: 0.5em;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1.5em;
+    flex-shrink: 0;
+}
+
+.pizzaBoxes h3 {
+    font-size: 1.8em;
+    color: white;
+    font-family: "babyloncia";
+    margin: 0.5em 0;
+    font-weight: 300;
+    letter-spacing: 1px;
+    flex-grow: 1;
+}
+
+.pizzaBoxes .btn {
+    display: inline-block;
+    background-color: transparent;
+    color: white;
+    padding: 0.9em 2.5em;
+    border: 1px solid white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    margin: 0.5em;
+    margin-top: auto;
+}
+.pizzaBoxes a{
+    margin: 1em;
+}
+
+.pizzaBoxes .btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* pizza Menu */
+/* #pizzasMenu{
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(0.8em);
+    color: white;
+    text-align: center;
+    padding: 4em 3em;
+    margin: 5em auto;
+    width: 80%;
+    max-width: 1000px;
+    border: 1px solid rgba(133, 71, 0, 0.6);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}  */
+
+
+
+/* #pizzasMenu table{
+    width: 100%;
+    background-color: transparent;
+    backdrop-filter: none;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+#pizzasMenu tr{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+#pizzasMenu tr:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#pizzasMenu td{
+    padding: 1.5em 1em;
+    font-size: 1.1em;
+    text-align: left;
+    border: none;
+}
+
+#pizzasMenu td:first-child{
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #f4a460;
+}
+
+#pizzasMenu td:nth-child(2){
+    text-align: center;
+    color: gold;
+    font-weight: 500;
+}
+
+#pizzasMenu td:last-child{
+    text-align: right;
+} */
+
+#pizzasMenu a{
+    display: inline-block;
+    color: white;
+    padding: 0.8em 2em;
+    border: 1px solid white;
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+#pizzasMenu a:hover{
+    background-color: white;
+    color: black;
+} 
+
+
+
+/* .pizza-filter{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    backdrop-filter: blur(0.5em);
+    padding: 4.5em; 
+    margin: 0;
+} */
+
+
+.overLay{
+    backdrop-filter: blur(0.5em);
+    padding: 4.5em; 
+    margin: 0;
+}
+#pizza img{
+    width: 85%; 
+}
+
+footer{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1em 1em;
+    /* position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;  */
+    text-align: center;
+}
+
+footer small{
+    color: white;
+    margin: 0;
+    font-size: 0.9em;
+}
+footer a:hover{
+    color: #f4a460;
+}
+
+
+
+.view_reviews{
+    border: 1px solid #854700;
+    background-color:rgba(0, 0, 0, 0.737); 
+    padding: 3em;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    backdrop-filter: blur(0.3em);
+    color: white;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 1em;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+}
+
+.view_reviews h1{
+    grid-column: 1 / -1; 
+    border-bottom: 1px solid gold;
+    margin-bottom: 0.5em;
+    font-family: "babyloncia"; 
+    padding-bottom: 0.5em;
+    font-size: 3.5em; 
+}
+.view_reviews h3{
+    text-align: center;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    align-items: center;
+}
+.view_reviews nav{
+    display: flex;
+    gap: 0.5;
+    margin: 0;
+    padding: 0;
+}
+
+
+.view_reviews nav a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size:1em;
+    padding: 0.5em 1em;
+    margin: 1em;
+    border-radius: none; 
+    
+    border: 1px solid white; 
+    transition: all 0.3s ease;
+    
+}
+small b{
+    font-size: 0.9em; 
+}
+.view_reviews nav a:hover{
+    padding: 0.5em; 
+    color: black; 
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+
+/* Container for the review articles */
+.view_reviews article{
+    background-color: rgba(19, 1, 1, 0.543);
+    backdrop-filter: blur(0.3em);
+    margin-right: 0.5em; 
+    border-radius: 0.1em;
+    padding: 0.5em;
+    border: 1px solid rgba(133, 71, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.view_reviews article:hover{
+    transform: translateY(-5px);
+}
+
+
+.view_reviews article p{
+    font-size: 0.7em;
+}
+
+
+.view_reviews table{
+    padding: 0.5em;
+    font-size: 0.8em;
+}
+.view_reviews th{
+    padding: 0.5em; 
+    font-size: 0.8em;
+}
+
+
+
+#write_review{
+    align-items: center;
+    text-align: center;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+/*pizza styling */
+#pizza{
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(0.8em);
+    color: white;
+    text-align: center;
+    padding: 4em 3em;
+    margin: 5em auto;
+    width: 60%;
+    max-width: 800px;
+    border-radius: 0;
+    border: 1px solid rgba(133, 71, 0, 0.6);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+#pizza h1{
+    font-family: "babyloncia";
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+    color: white;
+    border-bottom: 1px solid gold;
+    padding-bottom: 0.5em;
+    margin-top: 0;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+#pizza img{
+    object-fit: cover;
+    border-radius: none;
+    padding-bottom: 2em;
+    border-bottom: 1px solid white;
+    width: 100%;
+    height: 550px;
+    margin-bottom: 1.5em;
+    flex-shrink: 0;
+}
+
+#pizza p{
+    font-size: 1.1em;
+    margin: 1.5em auto;
+    line-height: 1.8;
+    max-width: 600px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#pizza a{
+    display: inline-block;
+    background-color: transparent;
+    color: white;
+    padding: 1em 2.5em;
+    margin: 2em 0.5em;
+    border-radius: 0;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 400;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+#pizza a:hover{
+    background-color: white;
+    color: black;
+}
+
+
+/* login css */
+.loginAccount{
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(0.8em);
+    color: white;
+    text-align: center;
+    padding: 2.5em 2.5em;
+    margin: 5em;
+    margin-right: auto;
+    margin-left: auto; 
+    width: 90%;
+    max-width: 500px;
+    border: 1px solid rgba(133, 71, 0, 0.6);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.loginAccount form{
+    background-color: transparent;
+    padding: 0;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto; 
+    border-radius: 0;
+    backdrop-filter: none;
+    box-shadow: none;
+}
+
+.loginAccount label{
+    display: block;
+    font-size: 1.1em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: white;
+    text-align: left;
+    padding-left: 0.5em;
+}
+
+.loginAccount input[type="text"],
+.loginAccount input[type="email"],
+.loginAccount input[type="password"]{
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 0.5em;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.3em;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.loginAccount input[type="text"]:focus,
+.loginAccount input[type="email"]:focus,
+.loginAccount input[type="password"]:focus{
+    outline: none;
+    border: 1px solid gold;
+    background-color: rgb(255, 255, 255);
+}
+
+.loginAccount input[type="submit"]{
+    width: 100%;
+    padding: 1em 2em;
+    margin-top: 2em;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.loginAccount input[type="submit"]:hover{
+    background-color: white;
+    color: black;
+}
+
+.loginAccount a{
+    display: inline-block;
+    margin-top: 1.5em;
+    color: white;
+    text-decoration: none;
+    font-size: 0.95em;
+    border: 1px solid rgb(255, 255, 255); 
+    padding: 0.5em; 
+    transition: all 0.3s ease;
+}
+
+.loginAccount a:hover{
+    transform: scale(1.1);
+    background-color: white;
+    color: black; 
+}
+
+/* Error messages */
+.loginAccount .error{
+    color: #ff6b6b;
+    font-size: 0.9em;
+    margin-top: 0.3em;
+    display: block;
+    text-align: left;
+    padding-left: 0.5em;
+}
+
+
+textarea{
+    width: 95%; 
+    min-height: 120px;
+    padding: 1em;
+    margin-right: auto;
+    margin-left: auto; 
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.5em;
+    color: white;
+    font-size: 1em;
+    font-family: inherit;
+    resize: vertical;
+    transition: all 0.3s ease;
+}
+
+textarea:focus{
+    outline: none;
+    border: 1px solid gold;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+textarea::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* If you want auto-expand */
+textarea{
+    overflow: hidden;
+}
+
+
+
+
+#header-logo{
+    width: 60px; 
+    height: 60px;
+    object-fit: contain;
+    position: absolute;
+    left: 0.5em;
+    top: 50%;
+    margin-left: 0.5em; 
+    transform: translateY(-50%); 
+}
+
+.icon{
+    border: none; 
+}
+.icon:hover{
+    background-color: transparent;
+    transform: none;
+    border-bottom: none;
+    text-decoration: none;
+}
+
+#cart-img{
+    width: 50px; 
+    height: 50px;
+    object-fit: contain;
+    position: absolute;
+    border-bottom: none; 
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);  
+}
+
+#user-img{
+    width: 45px; 
+    height: 45px;
+    object-fit: contain;
+    position: absolute;
+    right: 2em;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+/* rating */
+#rating{
+    display:flex;
+    gap: 0.5em;
+    margin-right: auto;
+    margin-left: auto; 
+}
+
+#rating input[type="radio"]{
+    margin-right: 0.3em;
+}
+
+
+#cart{
+    padding: 2em;
+    background-color: rgba(0, 0, 0, 0.671); 
+    text-align: center;
+    backdrop-filter: blur(0.1em);
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+table{
+    backdrop-filter: blur(0.1em);
+    margin-left: auto; 
+    margin-right: auto; 
+    padding: 3em;
+    font-size: 1em;
+}
+tr{
+    padding: 2em;
+    border-bottom: 1px solid rgba(133, 71, 0, 0.6);
+}
+th{ 
+    padding: 1em; 
+    background-color: black; 
+    border-bottom: 1px solid rgba(133, 71, 0, 0.6);
+}
+td{
+    padding: 1em; 
+    border-bottom: 1px solid rgba(133, 71, 0, 0.6);
+}
+
+#greeting{
+    text-align: center;
+    margin-left: 4em;
+    font-size: 0.8em; 
+    font-family: "upright" ; 
+
+}
+
+
+
+.btn{
+    display: inline-block;
+    margin-top: 1em;
+    margin: 0.5em; 
+    color: white;
+    text-decoration: none;
+    border: 1px solid white; 
+    font-size: 0.95em;
+    padding:  0.5em;
+}
+
+.btn:hover{ 
+    color: black; 
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.1);
+
+}
+
+
+
+form ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2em; 
+}
+
+form li{
+    display: flex;
+    align-items: center;
+}
+
+form ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+form li{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+form label[for="size"]{
+    display: block;
+    font-size: 1.3em;
+    color: white;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+
+
+input[type="radio"]{
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 2em; 
+    width: 20px; 
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    position: relative;
+    margin-right: 0.2em;
+    transition: all 0.3s ease;
+}
+
+
+/* Hover effect */
+input[type="radio"]:hover{
+    border-color: gold;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+input[type="radio"]:checked{
+    border-color: gold;
+    background-color: rgba(255, 215, 0, 0.2);
+}
+
+
+
+/* Style the labels */
+form ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1.5em;
+    margin: 1em 0;
+}
+
+form li{
+    display: flex;
+    align-items: center;
+}
+
+form li label{
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+form li:hover label{
+    color: gold;
+}
+
+#account_table{
+    margin-left: auto;
+    margin-right: auto; 
+    align-items: center;
+}
+
+/*submit button style */
+input[type="submit"],
+button[type="submit"] {
+    background-color: transparent;
+    color: white;
+    padding: 0.9em 2.5em;
+    border: 1px solid white;
+    font-size: 1em;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover{
+    background-color: white;
+    color: black;
+}
+
+
+
+
+
+/* check out */
+#check_out{
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(0.8em);
+    color: white;
+    text-align: center;
+    padding: 4em 3em;
+    margin: 5em auto;
+    width: 80%;
+    max-width: 1000px;
+    border: 1px solid rgba(133, 71, 0, 0.6);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+#check_out table{
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.85)
+}
+#check_out th{
+    padding: 0.5em; 
+    font-size: 0.8em;
+}
+
+.quantity-btn{
+    color: white;
+    padding: 0.5em;
+    margin: 0.5em; 
+    text-decoration: none;
+    font-size: 1.5em;
+}
+.quantity-btn:hover{
+    color:gold;
+}
+
+#filter{
+    background-color: black;
+    padding: 1em; 
+    margin: 1em; 
+    width: 85%;  
+}
+
+
+
+/* view account */
+.view_account {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #0d0d0d;
+    border: 1px solid #8B6914;
+}
+
+.view_account h1 {
+    font-family: "viaoda";
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+#account_table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+#account_table th {
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding: 12px 15px;
+    width: 45%;
+    border-bottom: 1px solid rgba(139, 105, 20, 0.4);
+    font-size: 0.85rem;
+}
+
+#account_table td {
+    color: white;
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(139, 105, 20, 0.4);
+    font-size: 0.85rem;
+}
+
+#account_table tr:last-child th,
+#account_table tr:last-child td {
+    border-bottom: none;
+}
+
+.view_account .btn {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin: 5px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.view_account .btn:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+#update-pizza {
+    background-color: #0d0d0d;
+    border: 1px solid #8B6914;
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 50px 40px;
+}
+
+#update-pizza h1 {
+    font-family: "viaoda";
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+#update-pizza label {
+    color: white;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+#update-pizza input,
+#update-pizza textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: white;
+    border: none;
+    color: black;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+#update-pizza textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+#update-pizza input[type="submit"] {
+    background-color: #0d0d0d;
+    color: white;
+    border: 1px solid white;
+    padding: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+#update-pizza input[type="submit"]:hover {
+    background-color: white;
+    color: black;
+}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<section class="overLay">
+<section id="pizzasMenu">
+    <h1>Our Menu</h1>
+    {% for p in pizza %}
+    <article class="pizzaBoxes">
+        <img src="{{url_for('static', filename=p['images']) }}">
+        <h3>{{ p["pizza_name"] }}</h3>
+        <p> €{{ p["base_price"] }}</p>
+             <a href="{{ url_for('pizza', pizza_id=p['pizza_id'])}}"> See details </a>
+    </article>
+    {% endfor %}
+</section>
+</section>
+{% endblock %}
+
+
+

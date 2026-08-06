@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block main_content %}
+
+<section class="bg-img">
+<section class="view_reviews">
+<nav>
+<a href="{{ url_for('submit_reviews')}}" class="btn"> Add review </a>
+<!-- <a href="{{ url_for('submit_reviews')}}" class="btn" > View review history </a> -->
+</nav>
+    <h1> My Reviews History </h1>
+    
+        {% for r in history %}
+    <article>
+        
+        <table>
+            <tr>
+                <td colspan="2">{{ r["created_at"] }}</td>
+            </tr>
+            <tr>
+                <th>Customer Name: </th>
+                <td colspan="2"><small>{{ r["first_name"] }} {{ r["last_name"] }}</small></td> 
+                <td colspan="3">{{ r["rating"] }}</td>
+            </tr>
+            <tr>
+                <th>Review</th>
+                <td colspan="3">{{ r["review"] }}</td>
+            </tr>
+        </table>
+        {% if r['customer_id'] == session['user_id']%}
+        <a href="{{ url_for('delete_review', review_id=r['review_id'])}}" class="btn" 
+            onclick="return confirm('are you sure pookie?')"> 
+            Delete Review 
+        </a>
+
+            <a href="{{ url_for('edit_review', review_id=r['review_id'])}}" class="btn"> Edit review</a>
+        {% endif %}
+
+</article>
+ {% endfor %}
+</section>
+</section>
+
+{% endblock %}

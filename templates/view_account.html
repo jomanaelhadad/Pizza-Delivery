@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block main_content %}
+<section class="wood-bg">
+<section class="view_account">
+    <h1>Account Details </h1>
+    <article id="account_table">
+          {% for a in account %}
+        <table >
+            <tr>
+                <th>Customer Name: </th>
+                <td>{{ a["first_name"] }} {{ a["last_name"] }} </td> 
+            </tr>
+                <tr>                
+                    <th>Email address: </th>
+                    <td>{{ a["email"] }}</td> 
+                </tr>
+                <tr>
+                    <th>Password: </th>
+                    <td>********</td>
+            </tr>
+            <tr>
+                <th>Phone Number:</th>
+                <td>{{a["phone_number"]}}</td>
+            </tr>
+            <tr>
+                <td>Address: </td>
+                <td>{{a["address"]}}</td>
+            </tr>
+        </table>
+            <a href="{{ url_for('delete_account')}}" class="btn" onclick="return confirm('Are you sure to permanently delete this account') ">Delete Account</a>
+            <a href="{{ url_for('logout')}}" class="btn"> Log Out </a>
+            
+            <a href="{{ url_for('edit_account')}}" class="btn"> Edit Account </a>
+            <a href="{{ url_for('order_history')}}" class="btn"> order history</a>
+    {% endfor %}
+</article>
+</section>
+</section>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<section class="wood-bg">
+<section id="pizza">
+    <h1>{{ pizza["pizza_name"] }}</h1>
+    
+    <img src="{{url_for('static', filename=pizza['images']) }}">
+    <p>
+        Base price : €{{ pizza["base_price"] }}
+    </p>
+    <p>
+        {{ pizza["description"] }}
+    </p>
+</section>
+</section>
+
+{% endblock %}

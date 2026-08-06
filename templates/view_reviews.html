@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block main_content %}
+
+<section class="wood-bg">
+<section class="view_reviews">
+
+<nav>
+<a href="{{ url_for('submit_reviews')}}" class="btn"> Add review </a>
+</nav>
+    <h1>Reviews</h1>
+
+        {% if deleted_message %}
+            <p> {{deleted_message}} </p>
+        {% endif %}
+        {% for r in reviews %}
+    <article>
+        
+        <table>
+            <tr>
+                <th>Date: </th>
+                <td colspan="4">{{ r["created_at"] }}</td>
+            </tr>
+            <tr>
+                <th>Customer Name: </th>
+                <td colspan="2"><small>{{ r["first_name"] }} {{ r["last_name"] }}</small></td> 
+                <td colspan="3">{{ r["rating"] }}</td>
+            </tr>
+            <tr>
+                <th>Review</th>
+                <td colspan="3">{{ r["review"] }}</td>
+
+            </tr>
+        </table>
+           {% if r['customer_id'] == session['user_id']%}
+             {% if message %}
+       <p> {{message}}</p>
+        {% endif %}
+   {% endif %}
+
+        {% if r['customer_id'] == session['user_id']%}
+            <a href="{{ url_for('delete_review', review_id=r['review_id'])}}" class="btn" 
+                onclick="return confirm('Are you sure to delete permanently delete this review?')">
+                    Delete Review </a>
+        {% endif %}
+
+        {% if r['customer_id'] == session['user_id']%}
+            <a href="{{ url_for('review_history', review_id=r['review_id'])}}" class="btn">View Review </a>
+        {% endif %}
+
+</article>
+ {% endfor %}
+</section>
+</section>
+{% endblock %}

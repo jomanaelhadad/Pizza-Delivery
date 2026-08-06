@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<section class="bg-img">
+<section class="loginAccount">
+    <form action="" method="POST" novalidate>
+        {{ form.hidden_tag() }}
+
+        {{ form.code.label }}
+        {{ form.code() }}
+        {% for error in form.code.errors %}
+            {{ error }}
+        {% endfor %}
+        <br /> 
+            {{ form.submit() }}
+</form>
+</section>
+</section>
+
+{%endblock%}

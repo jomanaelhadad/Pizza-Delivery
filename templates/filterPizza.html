@@ -1,0 +1,18 @@
+<section class="pizza-filter">
+<section class="loginAccount">
+    <form action="" method="POST" novalidate>
+        {{ form.hidden_tag() }}
+
+        {{ form.filterPizza.label }}
+        {{ form.filterPizza() }}
+        {% for error in form.filterPizza.errors %}
+            {{ error }}
+        {% endfor %}
+            <br /> 
+            {{ form.submit() }}
+</form>
+
+</section>
+</section>
+
+{% endblock %}

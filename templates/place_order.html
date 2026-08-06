@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<section class="wood-bg">
+    <section id="cart">
+
+
+        <h1> Your order Summary </h1>
+
+        {% if orders %}
+        <table>
+            <tr>
+                <th> Pizza Name </th>
+                <th> Quantity </th>
+                <th>Size</th>
+                <th> Price </th>
+            </tr>
+            {% for p in orders %}
+
+            <tr>
+                <td>{{p["pizza_name"]}}</td>
+                <td>{{p["quantity"]}}</td>
+                <td>{{p["size"]}}</td>
+                <td>{{(p["size_price"])|round(2)}}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <th>Total Price:</th>
+                <td colspan="5">€{{(total_price)|round(2)}}</td>
+            </tr>
+        </table>
+        <a href="{{url_for('promoCode')}}" class="btn"> Redeem Code </a>
+        {%if promo_discount %}
+        <p><small>{{promo_discount}}</small></p>
+        {% endif %}
+
+        {% else %}
+        <p> Your cart is empty</p>
+        {% endif %}
+
+        <section class="loginAccount">
+            <form action="" method="POST" novalidate>
+                <h1>Check Out</h1>
+                {{ form.hidden_tag() }}
+
+                {{ form.security_number.label }}
+                {{ form.security_number() }}
+                {% for error in form.security_number.errors %}
+                {{ error }}
+                {% endfor %}
+
+                {{ form.code.label }}
+                {{ form.code() }}
+                {% for error in form.code.errors %}
+                {{ error }}
+                {% endfor %}
+                <br />
+                {{ form.submit() }}
+                <small><b>*all your credit card information are never saved or shared (trust me)*</b></small>
+            </form>
+        </section>
+        <br>
+
+    </section>
+</section>
+
+
+{% endblock %}

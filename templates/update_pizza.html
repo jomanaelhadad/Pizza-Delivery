@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<section class="wood-bg">
+<section id="update-pizza">
+    <h1>Update Pizza </h1>
+    <form action="" method="POST" novalidate>
+        {{ form.hidden_tag() }}
+
+        {{ form.pizza_name.label }}
+        {{ form.pizza_name() }}
+        {% for error in form.pizza_name.errors %}
+            {{ error }}
+        {% endfor %}
+        <br>
+        {{ form.base_price.label }}
+        {{ form.base_price() }}
+        {% for error in form.base_price.errors %}
+            {{ error }}
+        {% endfor %}
+        <br>
+        {{ form.description.label }}
+        {{ form.description() }}
+        {% for error in form.description.errors %}
+            {{ error }}
+        {% endfor %}
+<br>
+            {{ form.submit() }}
+</form>
+</section>
+</section>
+
+{% endblock %}

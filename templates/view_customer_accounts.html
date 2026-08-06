@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block main_content %}
+<section class="wood-bg">
+<section class="view_account">
+    <h1>Customer's Accounts  </h1>
+    <a href="{{ url_for('customers_order_history')}}" class="btn"> Customer's order history</a>
+
+    <article id="account_table">
+        {% if ban_account %}
+            <p> {{ban_account}} </p>
+        {% endif %}
+
+          {% for a in customers_account %}
+        <table >
+            <tr>
+                <th>Id:</th>
+                <td>{{a["id"]}}</td>
+            </tr>
+            <tr>
+                <th>Customer Name: </th>
+                <td>{{ a["first_name"] }} {{ a["last_name"] }} </td> 
+            </tr>
+                <tr>                
+                    <th>Email address: </th>
+                    <td>{{ a["email"] }}</td> 
+                </tr>
+                <tr>
+                    <th>Password: </th>
+                    <td>********</td>
+            </tr>
+            <tr>
+                <th>Phone Number:</th>
+                <td>{{a["phone_number"]}}</td>
+            </tr>
+            <tr>
+                <td>Address: </td>
+                <td>{{a["address"]}}</td>
+            </tr>
+        </table>
+            <a href="{{ url_for('ban_account', customer_id=a['id']) }}" class="btn" onclick="return confirm('Are you sure to permanently ban this customer? ') "> Ban customer </a>
+    {% endfor %}
+</article>
+</section>
+</section>
+{% endblock %}

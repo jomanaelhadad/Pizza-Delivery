@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block main_content %}
+<div id="overlay">
+<section>
+        <h2>Try our Pizza Now!</h2>
+        <a href="{{ url_for('register')}}">Order Now </a>
+        <a href="{{ url_for('pizza')}}"> Continue as guest </a>
+        <small> Student offer ends on the 26th of February</small>
+
+</section>
+</div>
+{% endblock %}

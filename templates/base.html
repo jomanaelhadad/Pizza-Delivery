@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PizzaHaunt </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='template_styles.css') }}" > 
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='drawnPizza.png') }}">
+</head>
+    <body>
+        <header>
+            {% if welcome%}
+              <p id="greeting"> {{welcome}} </p>
+            {% endif %}
+
+            <a href="/">
+            <img src="{{ url_for('static', filename='drawnPizza.png') }}" alt="Pizza Logo" id="header-logo">
+            </a>
+            <h1> {{ title }}</h1>
+            <p> {{ phrase }} </p>
+            <nav>
+                <a href="{{url_for('index')}}">Home</a>
+                <a href="{{url_for('index')}}#pizzasMenu"> Menu</a>
+                <a href="{{ url_for('view_reviews')}}"> Reviews</a>
+                <a href="{{ url_for('view_account')}}"> Account </a>
+                <a href="{{ url_for('admin_login')}}"> Admin </a>
+                <a href="{{url_for('cart')}}" class="icon">
+                    <img src="{{ url_for('static', filename='drawn_cart.png') }}" id="cart-img" href="{{ url_for('cart')}}">
+                </a>
+            </nav>
+        </header>
+        <main>
+
+            {% block main_content %}
+            {% endblock %}
+        </main>
+        <footer>
+            <small><a href="{{url_for('credits')}}">All copy-right resources and websites i used</a></small>
+            <small>Check out our reviews from our customers.</small>
+            <section>
+            <h3>Reviews</h3>
+                    <a href="{{ url_for('view_reviews')}}"> Reviews</a>
+            </section>
+        </footer>
+    </body>
+</html>

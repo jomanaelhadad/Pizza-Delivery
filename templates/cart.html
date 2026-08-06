@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<section class="wood-bg">
+<section id="cart">
+<nav>
+<h1> Your Cart </h1>
+</nav>
+{% if orders %}
+    <table>
+        <tr>
+            <th> Pizza Name </th>
+            <th> Quantity </th>
+            <th> Size </th>
+            <th>Price</th>
+
+        </tr>
+        {% for p in orders %}
+        
+        <tr>
+            <td>{{p["pizza_name"]}}</td>
+            <td>
+              <a href="{{ url_for('delete_item', order_id=p['order_id'], pizza_id=p['pizza_id'], size=p['size'])}}" class="quantity-btn"> -</a>
+                {{p["quantity"]}}
+                <a href="{{ url_for('add_item', order_id=p['order_id'], pizza_id=p['pizza_id'],size=p['size'])}}"  class="quantity-btn"> +
+            </a>
+            </td>
+            <td>
+                {{p["size"]}}
+            </td>
+            <td>{{(p["size_price"])|round(2)}}</td>
+        </tr>
+    {% endfor %}
+            <tr>
+                <th>Total Price:</th>
+                <td colspan="5">€{{total_price}}</td>
+            </tr>
+    </table>
+    <a href="{{ url_for('delete_cart', order_id=order_id)}}" class="btn" onclick="return confirm('Are you sure to cancel this order?')"> Cancel Cart </a> 
+
+
+     <a href="{{ url_for('place_order', order_id=order_id)}}" class="btn" onclick="return confirm('Are you sure to cancel this order?')"> Place order </a> 
+
+    {% else %}
+        <p> Your cart is empty</p>
+    {% endif %}
+
+<!-- 
+{%if promo_discount %}
+    <p><small>{{promo_discount}}</small></p>
+    {% else %}
+        <p> Your cart is empty</p>
+    {% endif %} -->
+    
+</section>
+</section>
+
+
+{% endblock %}

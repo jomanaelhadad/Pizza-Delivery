@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+<section class="wood-bg">
+        
+<section id="pizzasMenu">
+    {%if edit_pizza%}
+       <p> {{edit_pizza}}</p>
+    {% endif %}
+    <h1> Our Menu </h1>
+    {% for p in pizza %}
+    <article class="pizzaBoxes">
+        <img src="{{url_for('static', filename=p['images']) }}">
+        <h3>{{ p["pizza_name"] }}</h3>
+        <p> €{{ p["base_price"] }}</p>
+        <a href="{{ url_for('admin_pizza', pizza_id=p['pizza_id'])}}"> See details </a>
+        <a href="{{url_for('update_pizza', pizza_id=p['pizza_id'])}}" class="btn"> Update Pizza </a>
+    </article>
+    {% endfor %}
+</section>
+</section>
+{% endblock %}

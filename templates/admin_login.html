@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<section class="wood-bg">
+<section class="loginAccount">
+    <form action="" method="POST" novalidate>
+        <h1> Welcome Admin </h1>
+        {{ form.hidden_tag() }}
+
+        {{ form.email.label }}
+        {{ form.email() }}
+        {% for error in form.email.errors %}
+            {{ error }}
+        {% endfor %}
+        <br /> 
+        {{ form.password.label }}
+        {{ form.password() }}
+        {% for error in form.password.errors %}
+            {{ error }}
+        {% endfor %}
+        <br /> 
+            {{ form.submit() }}
+</form>
+</section>
+</section>
+
+
+{% endblock %}

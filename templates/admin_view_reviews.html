@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block main_content %}
+
+<section class="wood-bg">
+<section class="view_reviews">
+
+    <h1>Reviews</h1>
+
+        {% if deleted_message %}
+            <p> {{deleted_message}} </p>
+        {% endif %}
+
+        {% for r in reviews %}
+    <article>
+        
+        <table>
+            <tr>
+                <th>Date: </th>
+                <td colspan="4">{{ r["created_at"] }}</td>
+            </tr>
+            <tr>
+                <th>Customer Name: </th>
+                <td colspan="2"><small>{{ r["first_name"] }} {{ r["last_name"] }}</small></td> 
+                <td colspan="3">{{ r["rating"] }}</td>
+            </tr>
+            <tr>
+                <th>Review</th>
+                <td colspan="3">{{ r["review"] }}</td>
+
+            </tr>
+        </table>
+
+        <a href="{{ url_for('admin_delete_review', review_id=r['review_id'])}}" class="btn" 
+                onclick="return confirm('Are you sure to delete permanently delete this review?')">
+                    Delete customer review
+        </a>
+</article>
+ {% endfor %}
+</section>
+</section>
+{% endblock %}
+
+

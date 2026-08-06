@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block main_content %}
+<section class="wood-bg">
+<section id="home">
+        <h2> Welcome Admin </h2>
+        <small> This is your admin account </small>
+        <a href="{{url_for('admin_edit_menu')}}" class="btn"> Edit Menu </a>
+        <a href="{{url_for('view_customer_accounts')}}" class="btn" > View accounts </a>
+        <a href="{{url_for('admin_view_reviews')}}" class="btn" > View reviews </a>
+</section>
+{% endblock %}

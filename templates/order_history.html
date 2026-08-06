@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<section class="wood-bg">
+<section id="cart">
+
+
+<h1> Your order history  </h1>
+{% if orders %}
+    <table>
+        <tr>
+            <th>Order date</th>
+            <th> Pizza Name </th>
+            <th> Quantity </th>
+            <th> Size </th>
+            <th> Price </th>
+            <th> Order price</th>
+        </tr>
+        {% for p in orders %}
+        <tr>
+            <td>{{p["order_date"]}}</td>
+            <td>{{p["pizza_name"]}}</td>
+            <td>{{p["quantity"]}}</td>
+            <td>{{p["size"]}}</td>
+            <td>{{(p["size_price"])|round(2)}}</td>
+            <td>{{ (p["size_price"] * p["quantity"]) |round(2)}}</td>
+        </tr>
+    {% endfor %}
+            <tr>
+                <th>Total order price:</th>
+                <td colspan="5">€{{(total_price)|round(2)}}</td>
+            </tr>
+    </table>
+
+    {% else %}
+        <p> Your order history is empty </p>
+    {% endif %}
+
+{% endblock %}
