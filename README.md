@@ -1,4 +1,4 @@
-# Pizza Delivery Web Application
+# Pizza Delivery Web Application (v1.0)
 
 A full-stack pizza delivery web application built using Flask for my university project.
 
@@ -79,4 +79,7 @@ Through this project I gained experience with:
 - Adding a "Add customer" route to make customers add each other
 - Adding a new route for uploading pictures for Admin to change the Pizza profile
 - Adding routes for customer profile to allow customers to upload their own profile pictures
-  
+
+
+## Bugs 
+- Admin does not register yet, as a column is missing -- Under development 
