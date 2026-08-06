@@ -44,7 +44,8 @@ pip install -r requirements.txt
 4. Open your browser and go to:
 http://127.0.0.1:5000
 
-
+### On server 
+Project is also available on the UCC school server https://cs1.ucc.ie/~je7/cgi-bin/ca1/run.py/
 ## What I Learned
 Through this project I gained experience with:
 
