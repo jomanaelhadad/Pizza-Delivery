@@ -34,22 +34,6 @@ This application allows users to browse pizzas, create accounts, place orders, v
 - CSS
 - Jinja2 Templates
 
-## Project Structure
-
-
-``
-final_ca1/
-│
-├── app.py   
-├── database.py 
-├── forms.py    
-├── schema.sql  
-│
-├── static/    
-│
-└── templates/  
-``
-
 ## How to Run
 1. Clone the repository:
 git clone <repository-url>
